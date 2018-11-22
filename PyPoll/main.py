@@ -66,8 +66,18 @@ winner = uniqueCand[index]
 #List of each candidate's votes: voterList
 #candidates: uniqueCand
 
-print(numVotes)
-print(uniqueCand)
-print(voterList)
-print(percentList)
-print(winner)
+print(f"Election Results\n-----------------\nTotal Votes:{numVotes}")
+print(f"-----------------")
+for idx,candidate in enumerate(uniqueCand):
+    print(f"{candidate}: {percentList[idx]}% ({voterList[idx]})")
+print(f"-----------------\nWinner: {winner}")
+print("-----------------")
+
+file = open("PyPollResults.txt", 'w')
+
+file.write(f"Election Results\n-----------------\n")
+file.write(f"Total Votes: {numVotes}\n-----------------\n")
+for idx,candidate in enumerate(uniqueCand):
+    file.write(f"{candidate}: {percentList[idx]}% ({voterList[idx]})\n")
+file.write(f"-----------------\nWinner: {winner}\n")
+file.write("-----------------")
