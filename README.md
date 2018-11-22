@@ -1,2 +1,2 @@
 # python-challenge
-homework 3, pyboss and pyparagraph
+homework 3 (PyBank and PyPoll) + pyboss and pyparagraph
